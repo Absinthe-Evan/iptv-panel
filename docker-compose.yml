@@ -1,0 +1,25 @@
+version: "3.9"
+
+services:
+  backend:
+    image: python:3.11-slim
+    container_name: iptv-panel-backend
+    working_dir: /app
+    volumes:
+      - ./backend:/app
+      - ./data:/data
+    ports:
+      - "8000:8000"
+    command: >
+      bash -c "
+      pip install --no-cache-dir -r requirements.txt &&
+      uvicorn main:app --host 0.0.0.0 --port 8000
+      "
+    restart: unless-stopped
+
+  iptv-spider:
+    image: ghcr.io/cqshushu/iptv-spider:latest
+    container_name: iptv-spider
+    volumes:
+      - ./data:/data
+    restart: unless-stopped
