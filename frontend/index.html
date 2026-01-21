@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>万人骑 IPTV 工具 v1.0</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- 顶部标题 -->
+  <header class="header">
+    万人骑 IPTV 工具 <span class="version">v1.0</span>
+  </header>
+
+  <!-- Tabs -->
+  <nav class="tabs">
+    <button class="tab active">采集</button>
+    <button class="tab">IP 管理</button>
+    <button class="tab">设置</button>
+  </nav>
+
+  <!-- 主内容 -->
+  <main class="container">
+
+    <section class="card">
+      <h3>数据采集设置</h3>
+
+      <div class="form-row">
+        <label>API：</label>
+        <select id="mode">
+          <option value="multicast">组播 (Multicast)</option>
+          <option value="unicast">单播 (Unicast)</option>
+        </select>
+
+        <label>页数：</label>
+        <input id="pages" type="number" value="2" min="1" />
+
+        <label>开始日期：</label>
+        <input id="date" type="date" />
+      </div>
+
+      <div class="actions">
+        <button id="startBtn" class="btn primary">正在采集...</button>
+        <button id="stopBtn" class="btn danger" disabled>停止采集</button>
+      </div>
+
+      <div class="status">
+        <span class="running">采集正在进行中，请稍后...</span>
+      </div>
+    </section>
+
+    <section class="card">
+      <h3>运行日志：</h3>
+      <pre id="log" class="log"></pre>
+    </section>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
