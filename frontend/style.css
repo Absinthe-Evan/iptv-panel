@@ -1,0 +1,140 @@
+/* 基础重置 */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f5f7fa;
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont,
+    "PingFang SC", "Microsoft YaHei",
+    "Helvetica Neue", Arial, sans-serif;
+}
+
+/* 顶部标题 */
+.header {
+  background: #ffffff;
+  padding: 14px 20px;
+  font-size: 20px;
+  font-weight: 600;
+  border-bottom: 1px solid #e6e8eb;
+}
+
+.header .version {
+  font-size: 14px;
+  color: #888;
+  margin-left: 6px;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  background: #ffffff;
+  border-bottom: 1px solid #e6e8eb;
+}
+
+.tab {
+  padding: 12px 20px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #666;
+}
+
+.tab.active {
+  color: #1677ff;
+  border-bottom: 2px solid #1677ff;
+  font-weight: 500;
+}
+
+/* 内容容器 */
+.container {
+  padding: 20px;
+}
+
+/* 卡片 */
+.card {
+  background: #ffffff;
+  border-radius: 6px;
+  padding: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.card h3 {
+  margin: 0 0 12px 0;
+  font-size: 16px;
+}
+
+/* 表单行 */
+.form-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.form-row label {
+  font-size: 14px;
+  color: #555;
+}
+
+.form-row select,
+.form-row input {
+  padding: 6px 8px;
+  border: 1px solid #dcdfe6;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* 操作按钮 */
+.actions {
+  margin-top: 14px;
+}
+
+.btn {
+  padding: 6px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.btn.primary {
+  background: #1677ff;
+  color: #fff;
+}
+
+.btn.danger {
+  background: #ff4d4f;
+  color: #fff;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* 状态提示 */
+.status {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #52c41a;
+}
+
+/* 日志区域 */
+.log {
+  background: #0f172a;
+  color: #e5e7eb;
+  padding: 12px;
+  height: 260px;
+  overflow-y: auto;
+  font-family: "JetBrains Mono", "Courier New", monospace;
+  font-size: 13px;
+  line-height: 1.5;
+  border-radius: 4px;
+  white-space: pre-wrap;
+}
